@@ -1,0 +1,14 @@
+name: Validate infographic knowledge base
+on:
+  push:
+  pull_request:
+jobs:
+  check-documents:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate internal links, sections, and image placement
+        run: python scripts/validate_repo.py
