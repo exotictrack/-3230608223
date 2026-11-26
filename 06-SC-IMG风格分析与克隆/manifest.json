@@ -1,0 +1,16 @@
+{
+  "system_id": "sc-img",
+  "version": "1.0.0",
+  "entry": "SYSTEM.md",
+  "entry_sha256": "80824e4e8c2be171bdcbfd513bb2d39194dcba3abd436f13f335c80f819ff43f",
+  "entry_end_marker": "SC-IMG 1.0.0 运行正文结束",
+  "memory_card": "MEMORY.md",
+  "schema": "schemas/render-spec.schema.json",
+  "outputs": [
+    "zh_json",
+    "en_json",
+    "zh_simple",
+    "natural_language_zh"
+  ],
+  "validation": "node tools/verify.cjs"
+}

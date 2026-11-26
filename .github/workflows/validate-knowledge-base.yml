@@ -12,3 +12,8 @@ jobs:
           python-version: '3.11'
       - name: Validate internal links, sections, and image placement
         run: python scripts/validate_repo.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate SC-IMG specifications and prompt exports
+        run: node 06-SC-IMG风格分析与克隆/tools/verify.cjs
